@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="ThemeHouse_ResourceIcons" title="[⌂] Resource Icons" version_string="1.1.0" version_id="1447261019" url="http://xf.themehouse.io/" install_callback_class="ThemeHouse_Install" install_callback_method="install" uninstall_callback_class="ThemeHouse_Install" uninstall_callback_method="uninstall">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="controller_pre_dispatch" execute_order="10" callback_class="ThemeHouse_Listener_ControllerPreDispatch" callback_method="controllerPreDispatch" active="1" hint="" description=""/>
+    <listener event_id="file_health_check" execute_order="10" callback_class="ThemeHouse_ResourceIcons_Listener_FileHealthCheck" callback_method="fileHealthCheck" active="1" hint="" description=""/>
+    <listener event_id="init_dependencies" execute_order="10" callback_class="ThemeHouse_Listener_InitDependencies" callback_method="initDependencies" active="1" hint="" description=""/>
+    <listener event_id="load_class" execute_order="10" callback_class="ThemeHouse_ResourceIcons_Listener_LoadClass" callback_method="loadClassModel" active="0" hint="XenResource_Model_Resource" description="XenResource_Model_Resource (For XenForo 1.2 and above)" compatibility_switch="1"/>
+    <listener event_id="load_class" execute_order="10" callback_class="ThemeHouse_ResourceIcons_Listener_LoadClass" callback_method="loadClassImage" active="0" hint="XenForo_Image_Gd" description="XenForo_Image_Gd (For XenForo 1.2 and above)" compatibility_switch="1"/>
+    <listener event_id="load_class_model" execute_order="10" callback_class="ThemeHouse_ResourceIcons_Listener_LoadClass" callback_method="loadClassModel" active="1" hint="" description="(For XenForo 1.1 and below)" compatibility_switch="1"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="th_resourceIcons" display_order="2000" debug_only="0"/>
+    <option option_id="th_resourceIcons_height" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>96</default_value>
+      <edit_format_params/>
+      <sub_options/>
+      <relation group_id="th_resourceIcons" display_order="20"/>
+    </option>
+    <option option_id="th_resourceIcons_width" edit_format="spinbox" data_type="positive_integer" can_backup="1">
+      <default_value>96</default_value>
+      <edit_format_params/>
+      <sub_options/>
+      <relation group_id="th_resourceIcons" display_order="10"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="option_group_th_resourceIcons" version_id="0" version_string="1.0.0"><![CDATA[Resource Icons by ThemeHouse]]></phrase>
+    <phrase title="option_group_th_resourceIcons_description" version_id="1381770049" version_string="1.0.0"><![CDATA[Options for the Resource Icons by ThemeHouse add-on.]]></phrase>
+    <phrase title="option_th_resourceIcons_height" version_id="0" version_string="1.0.0"><![CDATA[Icon Height]]></phrase>
+    <phrase title="option_th_resourceIcons_height_explain" version_id="0" version_string="1.0.0"><![CDATA[The height that all resource icons get resized to]]></phrase>
+    <phrase title="option_th_resourceIcons_width" version_id="0" version_string="1.0.0"><![CDATA[Icon Width]]></phrase>
+    <phrase title="option_th_resourceIcons_width_explain" version_id="0" version_string="1.0.0"><![CDATA[The width that all resource icons get resized to]]></phrase>
+    <phrase title="style_property_group_resourceIcons_master" version_id="1382183089" version_string="1.0.1"><![CDATA[Resource Icons by ThemeHouse]]></phrase>
+    <phrase title="style_property_group_resourceIcons_master_desc" version_id="1382183089" version_string="1.0.1"><![CDATA[Style properties for the Resource Icons by ThemeHouse add-on.]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveMedium_description_master" version_id="1382183089" version_string="1.0.1"><![CDATA[]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveMedium_master" version_id="1382183089" version_string="1.0.1"><![CDATA[Medium Responsive Icon Width]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveNarrow_description_master" version_id="1382183089" version_string="1.0.1"><![CDATA[]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveNarrow_master" version_id="1382183089" version_string="1.0.1"><![CDATA[Narrow Responsive Icon Width]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveWide_description_master" version_id="1382183089" version_string="1.0.1"><![CDATA[]]></phrase>
+    <phrase title="style_property_th_resourceIcons_responsiveWide_master" version_id="1382183089" version_string="1.0.1"><![CDATA[Wide Responsive Icon Width]]></phrase>
+    <phrase title="th_this_icon_should_be_x_by_y_pixels_resourceicons" version_id="1382105434" version_string="1.0.0"><![CDATA[This icon should be {width}x{height} pixels.]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties>
+    <property property_name="th_resourceIcons_responsiveWide" property_type="scalar" definition="1" group_name="resourceIcons" title="Wide Responsive Icon Width" description="" css_components="" scalar_type="number" scalar_parameters="" display_order="1" sub_group=""><![CDATA[96px]]></property>
+    <property property_name="th_resourceIcons_responsiveMedium" property_type="scalar" definition="1" group_name="resourceIcons" title="Medium Responsive Icon Width" description="" css_components="" scalar_type="number" scalar_parameters="" display_order="10" sub_group=""><![CDATA[96px]]></property>
+    <property property_name="th_resourceIcons_responsiveNarrow" property_type="scalar" definition="1" group_name="resourceIcons" title="Narrow Responsive Icon Width" description="" css_components="" scalar_type="number" scalar_parameters="" display_order="20" sub_group=""><![CDATA[96px]]></property>
+    <group group_name="resourceIcons" display_order="2000">
+      <title>Resource Icons by ThemeHouse</title>
+      <description>Style properties for the Resource Icons by ThemeHouse add-on.</description>
+    </group>
+  </style_properties>
+  <templates/>
+  <public_template_modifications>
+    <modification template="footer" modification_key="th_copyrightNotice_resourceIcons" description="Copyright notice for [⌂] Resource Icons" execution_order="1" enabled="1" action="callback">
+      <find><![CDATA[/{xen:phrase (?:xenforo|extra)_copyright}/]]></find>
+      <replace><![CDATA[ThemeHouse_Listener_InitDependencies::copyrightNotice]]></replace>
+    </modification>
+    <modification template="resource_icon.css" modification_key="th_resourceIconCss_resourceIcons" description="Edit CSS for different sized resource icons" execution_order="10" enabled="1" action="preg_replace">
+      <find><![CDATA[#$#]]></find>
+      <replace><![CDATA[.resourceIconEditor .currentIcon
+{
+	width: {xen:calc 'min({$xenOptions.th_resourceIcons_width}, 300)'}px;
+}
+
+.resourceIconEditor .currentIcon img
+{
+	max-width: {xen:calc 'min({$xenOptions.th_resourceIcons_width}, 300)'}px;
+}
+
+.resourceIconEditor .modifyControls {
+	margin-left: {xen:calc 'min({$xenOptions.th_resourceIcons_width}, 300) + 14'}px;
+}]]></replace>
+    </modification>
+    <modification template="resource_icon" modification_key="th_resourceIcon_resourceIcons" description="Edits explanation for resource icon upload." execution_order="10" enabled="1" action="str_replace">
+      <find><![CDATA[{xen:phrase this_icon_should_be_x_by_x_pixels, 'size={$iconSize}'}]]></find>
+      <replace><![CDATA[<xen:if is="{$xenOptions.th_resourceIcons_width} == {$xenOptions.th_resourceIcons_height}">
+	{xen:phrase this_icon_should_be_x_by_x_pixels, 'size={$iconSize}'}
+<xen:else />
+	{xen:phrase th_this_icon_should_be_x_by_y_pixels_resourceicons, 'width={$xenOptions.th_resourceIcons_width}', 'height={$xenOptions.th_resourceIcons_height}'}
+</xen:if>]]></replace>
+    </modification>
+    <modification template="resource_list.css" modification_key="th_resourceList_resourceIcons" description="Adds icon CSS to end of CSS template." execution_order="10" enabled="1" action="preg_replace">
+      <find><![CDATA[#$#]]></find>
+      <replace><![CDATA[.resourceListItem .resourceImage {
+	width: {xen:calc '{$xenOptions.th_resourceIcons_width}/2 + 3*2 + 5*2'}px;
+}
+
+.resourceListItem .resourceImage .resourceIcon img {
+	width: {xen:calc '{$xenOptions.th_resourceIcons_width}/2'}px;
+	height: {xen:calc '{$xenOptions.th_resourceIcons_height}/2'}px;
+}
+
+.resourceListItem .resourceImage .creatorMini {
+	left: {xen:calc '{$xenOptions.th_resourceIcons_width}/2 - 9'}px;
+}
+
+.featuredResourceList .featuredResource .resourceImage img {
+	max-width: 250px;
+	max-height: 100px;
+}
+
+.featuredResourceList .featuredResource .tagLine {
+	max-height: 55px;
+}
+
+<xen:if is="{xen:property enableResponsive}">
+@media (max-width:{xen:property maxResponsiveWideWidth})
+{
+	.resourceListItem .resourceImage {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveWide}/2 + 3*2 + 5*2'}px;
+	}
+	
+	.resourceListItem .resourceImage .resourceIcon img {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveWide}/2'}px;
+		height: {xen:calc '{$xenOptions.th_resourceIcons_height}*{xen:property th_resourceIcons_responsiveWide}/{$xenOptions.th_resourceIcons_width}/2'}px;
+	}
+	
+	.resourceListItem .resourceImage .creatorMini {
+		left: {xen:calc '{xen:property th_resourceIcons_responsiveWide}/2 - 9'}px;
+	}
+}
+
+@media (max-width:{xen:property maxResponsiveMediumWidth})
+{
+	.resourceListItem .resourceImage {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveMedium}/2 + 3*2 + 5*2'}px;
+	}
+	
+	.resourceListItem .resourceImage .resourceIcon img {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveMedium}/2'}px;
+		height: {xen:calc '{$xenOptions.th_resourceIcons_height}*{xen:property th_resourceIcons_responsiveMedium}/{$xenOptions.th_resourceIcons_width}/2'}px;
+	}
+	
+	.resourceListItem .resourceImage .creatorMini {
+		left: {xen:calc '{xen:property th_resourceIcons_responsiveMedium}/2 - 9'}px;
+	}
+}
+
+@media (max-width:{xen:property maxResponsiveNarrowWidth})
+{
+	.resourceListItem .resourceImage {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveNarrow}/2 + 3*2 + 5*2'}px;
+	}
+	
+	.resourceListItem .resourceImage .resourceIcon img {
+		width: {xen:calc '{xen:property th_resourceIcons_responsiveNarrow}/2'}px;
+		height: {xen:calc '{$xenOptions.th_resourceIcons_height}*{xen:property th_resourceIcons_responsiveNarrow}/{$xenOptions.th_resourceIcons_width}/2'}px;
+	}
+	
+	.resourceListItem .resourceImage .creatorMini {
+		left: {xen:calc '{xen:property th_resourceIcons_responsiveNarrow}/2 - 9'}px;
+	}
+}
+</xen:if>]]></replace>
+    </modification>
+    <modification template="resource_view_header.css" modification_key="th_resourceViewHeader_resourceIcons" description="Edit CSS for different sized resource icons" execution_order="10" enabled="1" action="preg_replace">
+      <find><![CDATA[#$#]]></find>
+      <replace><![CDATA[.resourceInfo .resourceImage .resourceIcon 
+{
+	width: {xen:calc '{$xenOptions.th_resourceIcons_width}/2'}px;
+	height: {xen:calc '{$xenOptions.th_resourceIcons_height}/2'}px;
+}
+
+.resourceInfo .resourceImage
+{
+	width: {xen:calc '{$xenOptions.th_resourceIcons_width}/2'}px;
+}]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
